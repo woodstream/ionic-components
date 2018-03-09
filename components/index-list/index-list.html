@@ -1,0 +1,14 @@
+<!-- Generated template for the IndexListComponent component -->
+<div class="index-list">
+  <div class="index-list-wrapper" #scrollContent tappable (scroll)="onScroll($event)">
+    <ng-content></ng-content>
+  </div>
+  <div class="index-list-nav" (touchstart)="touchstart($event)" (touchmove)="touchmove($event)" (touchend)="touchend($event)">
+    <div class="index-bar" *ngFor="let index of _indexes;" [class.index-list-nav-activate]="index === _currentIndicator">
+      {{index}}
+    </div>
+  </div>
+  <div class="modal" [class.show]="_showModal">
+    {{_currentIndicator}}
+  </div>
+</div>
