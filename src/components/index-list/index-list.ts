@@ -31,7 +31,7 @@ export class IndexListComponent {
 
 
   ngAfterViewInit(){
-    if (this._flag && this._listOfIndexSection){
+    if (this._flag && this._listOfIndexSection && this._listOfIndexSection.length > 0){
       this._listOfIndexSection.forEach((section: any) => {
         this._indexes.push(section.index);
         const offsetTop = section.getOffsetTop();

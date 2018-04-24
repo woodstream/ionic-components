@@ -1,0 +1,25 @@
+<!--
+  Generated template for the IndexListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>index-list</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <index-list radio-group [(ngModel)]="vm.selectedValue">
+    <index-group *ngFor="let group of vm.groups" [index]="group.key">
+      <ion-item *ngFor="let item of group.items">
+        <ion-label>{{item.name || item.title}}</ion-label>
+        <ion-radio value="{{item.value}}"></ion-radio>
+      </ion-item>
+    </index-group>
+  </index-list>
+</ion-content>

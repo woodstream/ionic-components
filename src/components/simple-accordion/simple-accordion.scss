@@ -1,0 +1,16 @@
+simple-accordion {
+    .header-container.item.list-header{
+        padding-left: 0px;
+        .header{
+            padding-left: 10px;
+            color: color($colors, primary);
+            ion-icon{
+                font-size: 1.5em;
+            }
+        }
+        .header:before {
+            content: "● ";
+            font-weight: bold;
+        }
+    }
+}

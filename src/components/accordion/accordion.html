@@ -1,0 +1,7 @@
+<!-- Generated template for the AccordionComponent component -->
+<div (click)="onHeaderClick($event)">
+  <ng-content select=".header" (click)="onHeaderClick($event)"></ng-content>
+</div>
+<ng-container *ngIf="isShow">
+  <ng-content select=".body"></ng-content>
+</ng-container>

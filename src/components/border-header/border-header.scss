@@ -1,0 +1,16 @@
+border-header {
+  .item.item-ios.list-header.list-header-ios {
+    padding-left: 0;
+    min-height: 0;
+
+    // Header内容
+    .border.border-left {
+      padding-left: 10px;
+      letter-spacing: .4px;
+    }
+
+    .badge.badge-ios {
+      margin-right: 15px;
+    }
+  }
+}

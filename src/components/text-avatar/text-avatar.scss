@@ -1,0 +1,17 @@
+text-avatar {
+    $text-avatar-size: 4.5rem !default;
+
+    .text-avatar {
+        background-color: lightblue;
+    }
+    
+    .text-avatar, .text-avatar::after {
+        width: $text-avatar-size;
+        height: $text-avatar-size;
+        border-radius: $text-avatar-size / 2;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        font-size: font-size(xxx-large);
+    }
+}

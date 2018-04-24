@@ -1,0 +1,7 @@
+<div class="searchbar">
+    <div class="searchbar-input-container">
+      <ion-input class="searchbar-input" placeholder="搜索" [(ngModel)]="value" (ngModelChange)="onInputChanged($event)"></ion-input>
+      <ion-icon name="ios-search" class="searchbar-search-icon"></ion-icon>
+      <ion-icon name="{{iconName}}" class="searchbar-filter-icon" (click)="onIconClick()"></ion-icon>
+    </div>
+  </div>

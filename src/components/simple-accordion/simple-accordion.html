@@ -1,0 +1,7 @@
+<!-- Generated template for the SimpleAccordionComponent component -->
+<ion-list-header class="header-container" (click)="onHeaderClick($event)" >
+  <span class="header">{{header}}</span>
+</ion-list-header>
+<ng-container *ngIf="isShow">
+  <ng-content></ng-content>
+</ng-container>

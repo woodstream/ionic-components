@@ -1,0 +1,9 @@
+<!-- Generated template for the EastHeaderComponent component -->
+<ion-list-header margin-top>
+  <span class="border border-left" [style.border-left]="borderLeft">
+    {{title}}
+  </span>
+  <ion-badge item-end *ngIf="badgeCount!=0" [style]="badge">
+    {{badgeCount}}
+  </ion-badge>
+</ion-list-header>
