@@ -30,18 +30,25 @@ export class IndexListComponent {
   }
 
 
-  ngAfterViewInit(){
-    if (this._flag && this._listOfIndexSection && this._listOfIndexSection.length > 0){
+  ngAfterContentChecked(){
+    this.resetIndicator();
+  }
+
+  resetIndicator(){
+    if (this._listOfIndexSection && this._listOfIndexSection.length > 0){
+      this._indexes = [];
+      this._offsetTops = [];
+      let tempIndexs: any[] = [];
       this._listOfIndexSection.forEach((section: any) => {
-        this._indexes.push(section.index);
+        tempIndexs.push(section.index);
         const offsetTop = section.getOffsetTop();
         this._offsetTops.push(offsetTop);
         console.log(section);
       });
+      this._indexes = tempIndexs;
       if(this._indexes.length>0){
         this._currentIndicator = this._indexes[0];
       }
-      this._flag = false;
     }
   }
 
